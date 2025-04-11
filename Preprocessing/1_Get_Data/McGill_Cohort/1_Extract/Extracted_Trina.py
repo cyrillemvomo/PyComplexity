@@ -4,12 +4,12 @@ __license__ = "MIT"
 
 
 
-class Extracted_Data:
+class Extracted_Data_Trina:
   """
     Countain the  gait data file and medical record (demographic and clinical) extracted
   """
   def __init__(self, Source_Folder_Path, Gait_Data_Path, Medical_Record_Path):
-    """Store raw data from the study :
+    """Store raw data from the study : "Cerebral Metabolic Changes Related to Freezing of Gait in Parkinson Disease"
       
     Input(s)
     ----------
@@ -41,7 +41,7 @@ class Extracted_Data:
       import pandas as pd
       import numpy as np
       sys.path.append(self.Source_Folder_Path)
-      from Sourced import RawData
+      from Sourced_Trina import RawData
       #In case an error occur
       if not self.Gait_Data_Path and not self.Medical_Record_Path and not self.Source_Folder_Path:
           raise ValueError("Both Gait Data, Source folder and Medical Record paths are missing.")
@@ -71,26 +71,31 @@ class Extracted_Data:
       GAIT_DICTIONNARY_SOURCED[label] = df
 
     ######### STORE EXTRACTED MEDICAL DATA #########
-    MEDICAL_DATA = SOURCED_DATA['Medical_Record'].sort_values(by='ID').set_index("ID")
-      # pd.DataFrame({
-    #                             'ID' : SOURCED_DATA['Medical_Record']['ID'].values,
-    #                             'HEIGHT_M' : SOURCED_DATA['Medical_Record']['Estimated Height (m)'].values,
-    #                             'START_S_APDM_STRAIGHT' : SOURCED_DATA['Medical_Record']['Start APDM straight'].values,
-    #                             'START_S_APDM_STEERING' : SOURCED_DATA['Medical_Record']['Start APDM steering'].values,
-    #                             'AGE_Y' : SOURCED_DATA['Medical_Record']['Age'].values,
-    #                             'DISEASE_DURATION' : SOURCED_DATA['Medical_Record']['Start APDM steering'].values,
-    #                             'SEX_F_1' : SOURCED_DATA['Medical_Record']['Start APDM steering'].values,
-    #                             'LEDD' : SOURCED_DATA['Medical_Record']['Start APDM steering'].values,
-    #                             'UPDRS_III_ON' : SOURCED_DATA['Medical_Record']['Start APDM steering'].values,
-    #                             'H&Y' : SOURCED_DATA['Medical_Record']['Start APDM steering'].values,
-    #                             'BALANCE_IMPAIRMENT_Y_1' : SOURCED_DATA['Medical_Record']['Start APDM steering'].values,
-    #                             'COGNITIVE_HEALTH' : SOURCED_DATA['Medical_Record']['Start APDM steering'].values,
-    #                             'PIGD_BURDEN' : SOURCED_DATA['Medical_Record']['PIGD_BURDEN'].values,
-    #                             'TREMOR_BURDEN' : SOURCED_DATA['TREMOR_BURDEN'].values,
-    #                             'START_S_APDM_STEERING' : SOURCED_DATA['Medical_Record']['Start APDM steering'].values,
-    #                             'START_S_APDM_STEERING' : SOURCED_DATA['Medical_Record']['Start APDM steering'].values,
-    #                             'START_S_APDM_STEERING' : SOURCED_DATA['Medical_Record']['Start APDM steering'].values
-    #                             }).sort_values(by='ID').set_index("ID")
+    MEDICAL_DATA = pd.DataFrame({
+                                'ID' : SOURCED_DATA['Medical_Record']['Subject ID'].values,
+                                'SEX' : SOURCED_DATA['Medical_Record']['Sex'].values,
+                                'AGE_Y' : SOURCED_DATA['Medical_Record']['Age (at first assessment)'].values,
+                                'HEIGHT_M' : SOURCED_DATA['Medical_Record']['Height (cm)'].values/1e2,
+                                'DISEASE_DURATION' : SOURCED_DATA['Medical_Record']['Disease Duration'].values,
+                                'MDS_UPDRS_III_ON' : SOURCED_DATA['Medical_Record']['UPDRS Motor Score ON (total/rigidity/bradykinesia/pigd/tremor)'].values,
+                                'MDS_UPDRS_III_OFF' : SOURCED_DATA['Medical_Record']['UPDRS Motor Score ON (total/rigidity/bradykinesia/pigd/tremor)'].values,
+                                'H&Y' : SOURCED_DATA['Medical_Record']['Hoehn & Yahr scale'].values,                            
+                                'COGNITIVE_HEALTH' : SOURCED_DATA['Medical_Record']['MOCA'].values,
+                                'HADS_A' : SOURCED_DATA['Medical_Record']['HADS-A'].values,
+                                'HADS_D' : SOURCED_DATA['Medical_Record']['HADS-D'].values,
+                                'HANDEDNESS_R_1' : np.where((SOURCED_DATA['Medical_Record']['Handedness (Edinborough)'].values.__contains__("R") == True), 1, 0),
+                                'BALANCE_IMPAIRMENT' : SOURCED_DATA['Medical_Record']['Previous Falls'].values,
+                                'FOG_STATUT' : SOURCED_DATA['Medical_Record']['Group (1=FOG+, 2= FOG-, 3= Control'].values,
+                                'PIGD_BURDEN' : SOURCED_DATA['Medical_Record']['pigd ON'].values,
+                                'TREMOR_BURDEN' : SOURCED_DATA['Medical_Record']['tremor ON'].values,
+                                'FOG_STATUT' : SOURCED_DATA['Medical_Record']['Group (1=FOG+, 2= FOG-, 3= Control'].values,
+                                'LEDD' : SOURCED_DATA['Medical_Record']['Dopa Equivalent'].values,
+                                'DOSE_STRAIGHT' : SOURCED_DATA['Medical_Record']['Dose for straight (mCi)'].values,
+                                'DOSE_STEERING' : SOURCED_DATA['Medical_Record']['Dose for steering (mCi)'].values,
+                                'UPTAKE_TIME_STRAIGHT' : SOURCED_DATA['Medical_Record']['uptake time straight'].values,
+                                'UPTAKE_TIME_STEERING' : SOURCED_DATA['Medical_Record']['uptake time steering'].values,
+                                'DAYS_BETWEEN_STEERING_AND_STRAIGHT' : SOURCED_DATA['Medical_Record']['Days between Gait tasks'].values
+                                }).sort_values(by='ID').set_index("ID")
     MEDICAL_DATA = MEDICAL_DATA[MEDICAL_DATA.index.isin(ID_LIST)]
     MEDICAL_DATA_SOURCED = {'Medical_Record': MEDICAL_DATA}
 
