@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="src/PyComplexity/Logo.jpg" alt="PyComplexity Logo" width="1000"/>
+  <img src="s/Users/cyrilleetude/Documents/GitHub/PyComplexity/src/PyComplexity/Logo.jpg" alt="PyComplexity Logo" width="1000"/>
 </p>
 
 # Python module for computing the Attractor Complexity Index (ACI), a non-linear measure of gait automaticity
@@ -13,7 +13,7 @@ ACI quantifies the divergence of trajectories in the reconstructed state space, 
 This measure is highly promising in geriatrics and neurological populations, where it can serve as a behavioural proxy of alterations in underlying gait control networks.
 
 <p align="center">
-  <img src="src/PyComplexity/Description_Illustration.jpg" alt="Workflow Illustration" width="1000"/>
+  <img src="/Users/cyrilleetude/Documents/GitHub/PyComplexity/src/PyComplexity/Description_Illustration.jpg" alt="Workflow Illustration" width="1000"/>
 </p>
 
 PyComplexity implements a suite of core functions commonly used in the estimation of Lyapunov exponents in gait analysis. The current implementation is adapted from the public MATLAB codebase (https://github.com/SjoerdBruijn/LocalDynamicStability). 
@@ -28,14 +28,14 @@ Planned updates for Summer 2026 will extend the framework to include data-driven
 ## Installation
 
 ```python
-pip install PyComplexity
+pip install PyComplexity-ACI
 ```
 
 ## Example
 
 ```python
 # ACI computation and plot divergence curve fit: 
-from PyComplexity import compute_aci
+from PyComplexity-ACI import compute_aci
 compute_aci(acc_magnitude, hc_frames, n_dim=5, delay=10, ws=12, fs=100, period=1, min_val= 5, plot=True)
 ```
 
