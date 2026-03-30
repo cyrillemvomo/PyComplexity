@@ -4,7 +4,7 @@
 
 # Python module for computing the Attractor Complexity Index (ACI), a non-linear measure of gait automaticity
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19324133.svg)](https://doi.org/10.5281/zenodo.19324133)  
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19324133.svg)](https://doi.org/10.5281/zenodo.19324133) ![visitors](https://visitor-badge.laobi.icu/badge?page_id=cyrillemvomo.PyComplexity)<!-- omit in toc -->
 
 The Attractor Complexity Index (ACI) corresponds to the long-term largest Lyapunov exponent derived from gait dynamics. Initially introduced as a measure of gait stability, it is now increasingly recognized as a marker of gait automaticity across conditions of graded complexity.
 
@@ -34,9 +34,9 @@ pip install PyComplexity
 ## Example
 
 ```bash
->>> # ACI computation and plot divergence curve fit: 
->>> from pycomplexity import compute_aci
->>> compute_aci(acc_magnitude, hc_frames, n_dim=5, delay=10, ws=12, fs=100, period=1, min_val= 5, plot=True)
+# ACI computation and plot divergence curve fit: 
+from pycomplexity import compute_aci
+compute_aci(acc_magnitude, hc_frames, n_dim=5, delay=10, ws=12, fs=100, period=1, min_val= 5, plot=True)
 ```
 
 
@@ -84,5 +84,5 @@ Wallot, S., & Mønster, D. (2018). Average mutual information and false-nearest 
 
 ## Contact
 
-Cyrille E. Mvomo, PhD Candidate at McGill (Canada) and Lake Lucerne Institute  
+Cyrille E. Mvomo, PhD Candidate at McGill (Canada) and Lake Lucerne Institute (Switzerland)
 cyrille.mvomo@mail.mcgill.ca
