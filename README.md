@@ -4,7 +4,7 @@
 
 # Python module for computing the Attractor Complexity Index (ACI), a non-linear measure of gait automaticity
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19324133.svg)](https://doi.org/10.5281/zenodo.19324133) ![visitors](https://visitor-badge.laobi.icu/badge?page_id=cyrillemvomo.PyComplexity)<!-- omit in toc -->
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19324133.svg)](https://doi.org/10.5281/zenodo.19324133) [![PyPI version](https://img.shields.io/pypi/v/PyComplexity-ACI.svg)](https://pypi.org/project/PyComplexity-ACI/) ![visitors](https://visitor-badge.laobi.icu/badge?page_id=cyrillemvomo.PyComplexity)<!-- omit in toc -->
 
 The Attractor Complexity Index (ACI) corresponds to the long-term largest Lyapunov exponent derived from gait dynamics. Initially introduced as a measure of gait stability, it is now increasingly recognized as a marker of gait automaticity across conditions of graded complexity.
 
