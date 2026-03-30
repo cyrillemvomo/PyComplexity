@@ -30,7 +30,7 @@ Planned updates for Summer 2026 will extend the framework to include data-driven
 
 ```bash
 pip install PyComplexity
-
+```
 ---
 
 ## How to cite
@@ -44,7 +44,7 @@ and:
 Mvomo, C. E., Njiki, J. B. S., Leibovich, D., Guedes, C., Potvin-Desrochers, A., Dixon, P. C., Awai, C. E., & Paquette, C. (2026). Gait-Related Digital Mobility Outcomes in Parkinson’s Disease: New Insights into Convergent Validity? medRxiv. https://doi.org/10.64898/2026.03.07.26347847  
 
 You can also cite BibTeX (optional):
-
+```bash
 @software{cyrillemvomo_2025_19324133,
   author       = {Cyrille E. Mvomo},
   title        = {PyComplexity: A Python module for computing the Attractor Complexity Index (ACI) from lower-back accelerometer time-series during gait},
@@ -55,7 +55,7 @@ You can also cite BibTeX (optional):
   doi          = {10.5281/zenodo.19324133},
   url          = {https://doi.org/10.5281/zenodo.19324133}
 }
-
+```
 ---
 
 ## References
