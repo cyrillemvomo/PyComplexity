@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="PyComplexity/src/Logo.jpg" alt="PyComplexity Logo" width="800"/>
+  <img src="PyComplexity/src/Logo.jpg" alt="PyComplexity Logo" width="1000"/>
 </p>
 
 # Python module for computing the Attractor Complexity Index (ACI), a non-linear measure of gait automaticity
@@ -13,18 +13,16 @@ ACI quantifies the divergence of trajectories in the reconstructed state space, 
 This measure is highly promising in geriatrics and neurological populations, where it can serve as a behavioural proxy of alterations in underlying gait control networks.
 
 <p align="center">
-  <img src="PyComplexity/src/Description_Illustration.jpg" alt="Workflow Illustration" width="800"/>
+  <img src="PyComplexity/src/Description_Illustration.jpg" alt="Workflow Illustration" width="1000"/>
 </p>
 
-PyComplexity implements a suite of core functions commonly used in the estimation of Lyapunov exponents in gait analysis. The current implementation is adapted from the public MATLAB codebase:  
-https://github.com/SjoerdBruijn/LocalDynamicStability  
+PyComplexity implements a suite of core functions commonly used in the estimation of Lyapunov exponents in gait analysis. The current implementation is adapted from the public MATLAB codebase (https://github.com/SjoerdBruijn/LocalDynamicStability)  
 
 This library translates these methods into Python to facilitate broader access to ACI computation in an open-source environment, particularly for researchers with limited resources or technical background.
 
 The current version provides a minimal and reproducible pipeline for deriving ACI from lower-back accelerometer time-series during gait, using fixed embedding parameters.
 
-Planned updates for Summer 2026 will extend the framework to include data-driven phase space reconstruction, with Python implementations of Global False Nearest Neighbours for optimal embedding dimension selection and Average Mutual Information for time delay estimation. These additions will be based on the following MATLAB implementation:  
-https://github.com/danm0nster/mdembedding  
+Planned updates for Summer 2026 will extend the framework to include data-driven phase space reconstruction, with Python implementations of Global False Nearest Neighbours for optimal embedding dimension selection and Average Mutual Information for time delay estimation. These additions will be based on the following MATLAB implementation (https://github.com/danm0nster/mdembedding)
 
 ---
 
@@ -36,7 +34,7 @@ pip install PyComplexity
 
 ## How to cite
 
-If you use this package, please cite:
+If you use this package, please cite (mandatory):
 
 Mvomo, C. E. (2025). PyComplexity: A Python module for computing the Attractor Complexity Index (ACI) from lower-back accelerometer time-series during gait (Version v0.1.0). Zenodo. http://doi.org/10.5281/zenodo.19324133  
 
@@ -44,7 +42,7 @@ and:
 
 Mvomo, C. E., Njiki, J. B. S., Leibovich, D., Guedes, C., Potvin-Desrochers, A., Dixon, P. C., Awai, C. E., & Paquette, C. (2026). Gait-Related Digital Mobility Outcomes in Parkinson’s Disease: New Insights into Convergent Validity? medRxiv. https://doi.org/10.64898/2026.03.07.26347847  
 
-BibTeX:
+You can also cite BibTeX (optional):
 
 @software{cyrillemvomo_2025_19324133,
   author       = {Cyrille E. Mvomo},
@@ -79,5 +77,5 @@ Wallot, S., & Mønster, D. (2018). Average mutual information and false-nearest 
 
 ## Contact
 
-Cyrille E. Mvomo  
+Cyrille E. Mvomo, PhD Candidate at McGill (Canada) and Lake Lucerne Institute  
 cyrille.mvomo@mail.mcgill.ca
