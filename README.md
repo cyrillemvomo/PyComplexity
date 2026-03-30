@@ -52,7 +52,7 @@ and:
 Mvomo, C. E., Njiki, J. B. S., Leibovich, D., Guedes, C., Potvin-Desrochers, A., Dixon, P. C., Awai, C. E., & Paquette, C. (2026). Gait-Related Digital Mobility Outcomes in Parkinson’s Disease: New Insights into Convergent Validity? medRxiv. https://doi.org/10.64898/2026.03.07.26347847  
 
 You can also cite BibTeX (optional):
-```bash
+```bibtex
 @software{cyrillemvomo_2025_19324133,
   author       = {Cyrille E. Mvomo},
   title        = {PyComplexity: A Python module for computing the Attractor Complexity Index (ACI) from lower-back accelerometer time-series during gait},
