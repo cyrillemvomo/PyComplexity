@@ -16,18 +16,19 @@ This measure is highly promising in geriatrics and neurological populations, whe
   <img src="PyComplexity/src/Description_Illustration.jpg" alt="Workflow Illustration" width="1000"/>
 </p>
 
-PyComplexity implements a suite of core functions commonly used in the estimation of Lyapunov exponents in gait analysis. The current implementation is adapted from the public MATLAB codebase (https://github.com/SjoerdBruijn/LocalDynamicStability)  
+PyComplexity implements a suite of core functions commonly used in the estimation of Lyapunov exponents in gait analysis. The current implementation is adapted from the public MATLAB codebase (https://github.com/SjoerdBruijn/LocalDynamicStability). 
 
 This library translates these methods into Python to facilitate broader access to ACI computation in an open-source environment, particularly for researchers with limited resources or technical background.
 
 The current version provides a minimal and reproducible pipeline for deriving ACI from lower-back accelerometer time-series during gait, using fixed embedding parameters.
 
-Planned updates for Summer 2026 will extend the framework to include data-driven phase space reconstruction, with Python implementations of Global False Nearest Neighbours for optimal embedding dimension selection and Average Mutual Information for time delay estimation. These additions will be based on the following MATLAB implementation (https://github.com/danm0nster/mdembedding)
+Planned updates for Summer 2026 will extend the framework to include data-driven phase space reconstruction, with Python implementations of Global False Nearest Neighbours for optimal embedding dimension selection and Average Mutual Information for time delay estimation. These additions will be based on the following MATLAB implementation (https://github.com/danm0nster/mdembedding).
 
 ---
 
 ## Installation
 
+```bash
 pip install PyComplexity
 
 ---
