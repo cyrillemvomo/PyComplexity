@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "PyComplexity-ACI"
-version = "0.1.0"
+version = "0.1.2"
 description = "A Python module for computing the Attractor Complexity Index (ACI) from lower-back accelerometer time-series during gait."
 readme = "README.md"
 requires-python = ">=3.10"

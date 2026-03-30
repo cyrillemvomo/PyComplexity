@@ -1,5 +1,27 @@
+Metadata-Version: 2.4
+Name: PyComplexity-ACI
+Version: 0.1.1
+Summary: A Python module for computing the Attractor Complexity Index (ACI) from lower-back accelerometer time-series during gait.
+Author-email: "Cyrille E. Mvomo" <cyrille.mvomo@mail.mcgill.ca>
+License-Expression: MIT
+Project-URL: Homepage, https://github.com/cyrillemvomo/PyComplexity
+Project-URL: Zenodo, https://doi.org/10.5281/zenodo.19324133
+Keywords: gait,biomarker,accelerometry,lyapunov exponent,non-linear dynamics,neural control of locomotion,wearable sensors
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy>=1.26.4
+Requires-Dist: scipy>=1.11.4
+Provides-Extra: viz
+Requires-Dist: plotly>=5.18; extra == "viz"
+Dynamic: license-file
+
 <p align="center">
-  <img src="https://raw.githubusercontent.com/cyrillemvomo/PyComplexity/main/src/PyComplexity/Logo.jpg" alt="PyComplexity Logo" width="1000"/>
+  <img src="s/Users/cyrilleetude/Documents/GitHub/PyComplexity/src/PyComplexity/Logo.jpg" alt="PyComplexity Logo" width="1000"/>
 </p>
 
 # Python module for computing the Attractor Complexity Index (ACI), a non-linear measure of gait automaticity
@@ -13,7 +35,7 @@ ACI quantifies the divergence of trajectories in the reconstructed state space, 
 This measure is highly promising in geriatrics and neurological populations, where it can serve as a behavioural proxy of alterations in underlying gait control networks.
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/cyrillemvomo/PyComplexity/main/src/PyComplexity/Description_Illustration.jpg" alt="PyComplexity Logo" width="1000"/>
+  <img src="/Users/cyrilleetude/Documents/GitHub/PyComplexity/src/PyComplexity/Description_Illustration.jpg" alt="Workflow Illustration" width="1000"/>
 </p>
 
 PyComplexity implements a suite of core functions commonly used in the estimation of Lyapunov exponents in gait analysis. The current implementation is adapted from the public MATLAB codebase (https://github.com/SjoerdBruijn/LocalDynamicStability). 
@@ -59,7 +81,7 @@ You can also cite BibTeX (optional):
   month        = July,
   year         = 2025,
   publisher    = {Zenodo},
-  version      = {v0.1.2},
+  version      = {v0.1.0},
   doi          = {10.5281/zenodo.19324133},
   url          = {https://doi.org/10.5281/zenodo.19324133}
 }
