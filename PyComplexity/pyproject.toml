@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=80", "wheel>=0.45"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "PyComplexity"
+version = "0.1.0"
+description = "A Python module for computing the Attractor Complexity Index (ACI) from lower-back accelerometer time-series during gait."
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [
+  {name = "Cyrille E. Mvomo", email = "cyrille.mvomo@mail.mcgill.ca"}
+]
+keywords = ["gait", "biomarker", "accelerometry", "lyapunov exponent", "non-linear dynamics", "neural control of locomotion", "wearable sensors"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Intended Audience :: Science/Research",
+  "Topic :: Scientific/Engineering/Neuromechanics"
+]
+
+dependencies = [
+  "numpy>=1.26.4",
+  "scipy>=1.11.4"
+]
+
+[project.optional-dependencies]
+viz = ["plotly>=5.18"]
+
+[project.urls]
+Homepage = "https://github.com/cyrillemvomo/PyComplexity"
+Zenodo = "https://doi.org/10.5281/zenodo.19324133"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
