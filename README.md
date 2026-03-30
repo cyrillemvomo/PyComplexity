@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="/Users/cyrilleetude/Documents/GitHub/PyComplexity/PyComplexity/Logo.jpg" alt="PyComplexity Logo" width="300"/>
+  <img src="src/Logo.jpg" alt="PyComplexity Logo" width="300"/>
 </p>
 
 # PyComplexity
@@ -19,7 +19,7 @@ ACI quantifies the divergence of trajectories in the reconstructed state space, 
 This measure is highly promising in geriatrics and neurological populations, where it can serve as a behavioural proxy of alterations in underlying gait control networks.
 
 <p align="center">
-  <img src="/Users/cyrilleetude/Documents/GitHub/PyComplexity/PyComplexity/Description_Illustration.jpg" alt="Workflow Illustration" width="700"/>
+  <img src="src/Description_Illustration.jpg" alt="Workflow Illustration" width="700"/>
 </p>
 
 PyComplexity implements a suite of core functions commonly used in the estimation of Lyapunov exponents in gait analysis. The current implementation is adapted from the public MATLAB codebase:  
