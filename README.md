@@ -24,14 +24,22 @@ The current version provides a minimal and reproducible pipeline for deriving AC
 
 Planned updates for Summer 2026 will extend the framework to include data-driven phase space reconstruction, with Python implementations of Global False Nearest Neighbours for optimal embedding dimension selection and Average Mutual Information for time delay estimation. These additions will be based on the following MATLAB implementation (https://github.com/danm0nster/mdembedding).
 
----
 
 ## Installation
 
 ```bash
 pip install PyComplexity
 ```
----
+
+## Example
+
+```bash
+>>> # ACI computation and plot divergence curve fit: 
+>>> from pycomplexity import compute_aci
+>>> compute_aci(acc_magnitude, hc_frames, n_dim=5, delay=10, ws=12, fs=100, period=1, min_val= 5, plot=True)
+```
+
+
 
 ## How to cite
 
@@ -56,7 +64,6 @@ You can also cite BibTeX (optional):
   url          = {https://doi.org/10.5281/zenodo.19324133}
 }
 ```
----
 
 ## References
 
@@ -74,7 +81,6 @@ Bruijn, S. M. (2023). LocalDynamicStability MATLAB implementation. Zenodo. http:
 
 Wallot, S., & Mønster, D. (2018). Average mutual information and false-nearest neighbors for embedding. Frontiers in Psychology, 9, 1679  
 
----
 
 ## Contact
 
