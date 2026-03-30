@@ -27,13 +27,13 @@ Planned updates for Summer 2026 will extend the framework to include data-driven
 
 ## Installation
 
-```bash
+```python
 pip install PyComplexity
 ```
 
 ## Example
 
-```bash
+```python
 # ACI computation and plot divergence curve fit: 
 from pycomplexity import compute_aci
 compute_aci(acc_magnitude, hc_frames, n_dim=5, delay=10, ws=12, fs=100, period=1, min_val= 5, plot=True)
